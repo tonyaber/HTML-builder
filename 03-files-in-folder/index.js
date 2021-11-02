@@ -7,7 +7,7 @@ fs.readdir(path.resolve(__dirname, 'secret-folder'), (err, files) => {
       fs.promises.stat(path.resolve(__dirname, 'secret-folder', file))
         .then(statFile => {
           if (!statFile.isDirectory()) {
-            console.log(`${file.substring(0, file.lastIndexOf('.'))} - ${path.extname(file.toString()).substring(1)} - ${statFile.size}b`)
+            console.log(`${file.substring(0, file.lastIndexOf('.'))} - ${path.extname(file.toString()).substring(1)} - ${statFile.size}b`);
           }
         });
     });
